@@ -16,6 +16,4 @@ my_dict['dict'].pop('two')
 my_dict['set'].add(13)
 my_dict['set'].pop()
 
-# print(my_dict['list'])   для проверки отладки
-# print (my_dict['dict'])
-# print(my_dict['set'])
+print(my_dict)
