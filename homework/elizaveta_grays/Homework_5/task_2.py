@@ -17,4 +17,3 @@ text = my_list[2][sym + 1:]
 text = text.strip()
 res = int(text) + 10
 print(res)
-
