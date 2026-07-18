@@ -1,5 +1,5 @@
-students = 'Ivanov', 'Petrov', 'Sidorov'
-subjects = 'math', 'biology', 'geography'
+students = ['Ivanov', 'Petrov', 'Sidorov']
+subjects = ['math', 'biology', 'geography']
 
 students_str = ', '.join(students)
 subjects_str = ', '.join(subjects)
