@@ -46,11 +46,8 @@ print(f'Название: {book_5.title}, Автор: {book_5.author}, стра�
       f'материал: {book_5.page_material}{", зарезервирована" if book_5.reservation else ""}')
 
 print(f'Название: {sch_book_1.title}, Автор: {sch_book_1.author}, страниц: {sch_book_1.page_count}, '
-      f'предмет: {sch_book_1.subject}, класс: {sch_book_1.grade}{", зарезервирована" if sch_book_1.reservation
-      else ""}')
+    f'предмет: {sch_book_1.subject}, класс: {sch_book_1.grade}{", зарезервирована" if sch_book_1.reservation else ""}')
 print(f'Название: {sch_book_2.title}, Автор: {sch_book_2.author}, страниц: {sch_book_2.page_count}, '
-      f'предмет: {sch_book_2.subject}, класс: {sch_book_2.grade}{", зарезервирована" if sch_book_2.reservation
-      else ""}')
+    f'предмет: {sch_book_2.subject}, класс: {sch_book_2.grade}{", зарезервирована" if sch_book_2.reservation else ""}')
 print(f'Название: {sch_book_3.title}, Автор: {sch_book_3.author}, страниц: {sch_book_3.page_count}, '
-      f'предмет: {sch_book_3.subject}, класс: {sch_book_3.grade}{", зарезервирована" if sch_book_3.reservation
-      else ""}')
+    f'предмет: {sch_book_3.subject}, класс: {sch_book_3.grade}{", зарезервирована" if sch_book_3.reservation else ""}')
