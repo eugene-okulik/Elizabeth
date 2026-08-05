@@ -10,7 +10,8 @@ class Book:
         self.reservation = reservation
 
     def info(self):
-        line = f'Название: {self.title}, Автор: {self.author}, страниц: {self.page_count}, материал: {self.page_material}'
+        line = (f'Название: {self.title}, Автор: {self.author}, страниц: {self.page_count}, '
+                f'материал: {self.page_material}')
         if self.reservation:
             line += ', зарезервирована'
         return line
