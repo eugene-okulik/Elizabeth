@@ -42,7 +42,7 @@ def format_book(book):
     elif isinstance(book, Book):
         str_line = str_line + f', материал: {book.page_material}'
     if book.reservation:
-        str_line = str_line + f', зарезервирована'
+        str_line = str_line + ', зарезервирована'
     return str_line
 
 
