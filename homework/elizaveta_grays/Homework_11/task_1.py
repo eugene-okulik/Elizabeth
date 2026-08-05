@@ -9,6 +9,12 @@ class Book:
         self.publisher = publisher
         self.reservation = reservation
 
+    def info(self):
+        line = f'Название: {self.title}, Автор: {self.author}, страниц: {self.page_count}, материал: {self.page_material}'
+        if self.reservation:
+            line += ', зарезервирована'
+        return line
+
 
 class SchoolBook(Book):
 
@@ -17,6 +23,13 @@ class SchoolBook(Book):
         self.subject = subject
         self.grade = grade
         self.has_tasks = has_tasks
+
+    def info(self):
+        line = f'Название: {self.title}, Автор: {self.author}, страниц: {self.page_count}'
+        line += f', предмет: {self.subject}, класс: {self.grade}'
+        if self.reservation:
+            line += ', зарезервирована'
+        return line
 
 
 book_1 = Book('Идиот', 'Достоевский', 672, 'АСТ', True)
@@ -34,23 +47,11 @@ sch_book_3 = SchoolBook('Учебник по Географии', 'Дроздо�
 
 sch_book_2.reservation = True
 
-
-def format_book(book):
-    str_line = f'Название: {book.title}, Автор: {book.author}, страниц: {book.page_count}'
-    if isinstance(book, SchoolBook):
-        str_line = str_line + f', предмет: {book.subject}, класс: {book.grade}'
-    elif isinstance(book, Book):
-        str_line = str_line + f', материал: {book.page_material}'
-    if book.reservation:
-        str_line = str_line + ', зарезервирована'
-    return str_line
-
-
-print(format_book(book_1))
-print(format_book(book_2))
-print(format_book(book_3))
-print(format_book(book_4))
-print(format_book(book_5))
-print(format_book(sch_book_1))
-print(format_book(sch_book_2))
-print(format_book(sch_book_3))
+print(book_1.info())
+print(book_2.info())
+print(book_3.info())
+print(book_4.info())
+print(book_5.info())
+print(sch_book_1.info())
+print(sch_book_2.info())
+print(sch_book_3.info())
