@@ -34,39 +34,23 @@ sch_book_3 = SchoolBook('Учебник по Географии', 'Дроздо�
 
 sch_book_2.reservation = True
 
-print(
-    f'Название: {book_1.title}, Автор: {book_1.author}, страниц: {book_1.page_count}, '
-    f'материал: {book_1.page_material}{", зарезервирована" if book_1.reservation else ""}'
-)
-print(
-    f'Название: {book_2.title}, Автор: {book_2.author}, страниц: {book_2.page_count}, '
-    f'материал: {book_2.page_material}{", зарезервирована" if book_2.reservation else ""}'
-)
-print(
-    f'Название: {book_3.title}, Автор: {book_3.author}, страниц: {book_3.page_count}, '
-    f'материал: {book_3.page_material}{", зарезервирована" if book_3.reservation else ""}'
-)
-print(
-    f'Название: {book_4.title}, Автор: {book_4.author}, страниц: {book_4.page_count}, '
-    f'материал: {book_4.page_material}{", зарезервирована" if book_4.reservation else ""}'
-)
-print(
-    f'Название: {book_5.title}, Автор: {book_5.author}, страниц: {book_5.page_count}, '
-    f'материал: {book_5.page_material}{", зарезервирована" if book_5.reservation else ""}'
-)
 
-print(
-    f'Название: {sch_book_1.title}, Автор: {sch_book_1.author}, страниц: {sch_book_1.page_count}, '
-    f'предмет: {sch_book_1.subject}, класс: {sch_book_1.grade}'
-    f'{", зарезервирована" if sch_book_1.reservation else ""}'
-)
-print(
-    f'Название: {sch_book_2.title}, Автор: {sch_book_2.author}, страниц: {sch_book_2.page_count}, '
-    f'предмет: {sch_book_2.subject}, класс: {sch_book_2.grade}'
-    f'{", зарезервирована" if sch_book_2.reservation else ""}'
-)
-print(
-    f'Название: {sch_book_3.title}, Автор: {sch_book_3.author}, страниц: {sch_book_3.page_count}, '
-    f'предмет: {sch_book_3.subject}, класс: {sch_book_3.grade}'
-    f'{", зарезервирована" if sch_book_3.reservation else ""}'
-)
+def format_book(book):
+    str_line = f'Название: {book.title}, Автор: {book.author}, страниц: {book.page_count}'
+    if isinstance(book, SchoolBook):
+        str_line = str_line + f', предмет: {book.subject}, класс: {book.grade}'
+    elif isinstance(book, Book):
+        str_line = str_line + f', материал: {book.page_material}'
+    if book.reservation:
+        str_line = str_line + f', зарезервирована'
+    return str_line
+
+
+print(format_book(book_1))
+print(format_book(book_2))
+print(format_book(book_3))
+print(format_book(book_4))
+print(format_book(book_5))
+print(format_book(sch_book_1))
+print(format_book(sch_book_2))
+print(format_book(sch_book_3))
