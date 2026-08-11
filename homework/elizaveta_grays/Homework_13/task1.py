@@ -29,4 +29,5 @@ def process_line(line):
         print(date_ago.days)
 
 
-for line in read_file(): process_line(line)
+for line in read_file():
+    process_line(line)
