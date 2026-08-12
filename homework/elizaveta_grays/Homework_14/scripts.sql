@@ -1,10 +1,9 @@
-INSERT INTO students (name,second_name) VALUES ('Elizaveta','Grays')
+INSERT INTO students (name,second_name) VALUES ('Elizaveta','Grays', NULL)
 
-INSERT INTO books (title,taken_by_student_id) VALUES ('Master and Margarita', 23076)
-
-INSERT INTO books (title,taken_by_student_id) VALUES ('War and World', 23076)
-
-INSERT INTO books (title,taken_by_student_id) VALUES ('Evgenii Onegin', 23076)
+INSERT INTO books (title,taken_by_student_id) VALUES
+('Master and Margarita', 23076),
+('War and World', 23076),
+('Evgenii Onegin', 23076)
 
 INSERT INTO `groups` (id,title,start_date,end_date) VALUES (23076,'Tester', '01 aug 2026', '31 aug 2026')
 
