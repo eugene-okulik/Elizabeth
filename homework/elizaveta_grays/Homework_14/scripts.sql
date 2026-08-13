@@ -7,7 +7,7 @@ INSERT INTO books (title,taken_by_student_id) VALUES
 
 INSERT INTO `groups` (id,title,start_date,end_date) VALUES (23076,'Tester', '01 aug 2026', '31 aug 2026')
 
-INSERT INTO students (groups_id) VALUES (23076)
+UPDATE students SET groups_id=23076 WHERE id=23076
 
 INSERT INTO subjects (title) VALUES ('geography'), ('english'),('biology')
 
