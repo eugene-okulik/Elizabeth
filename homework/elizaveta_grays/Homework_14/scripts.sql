@@ -7,6 +7,8 @@ INSERT INTO books (title,taken_by_student_id) VALUES
 
 INSERT INTO `groups` (id,title,start_date,end_date) VALUES (23076,'Tester', '01 aug 2026', '31 aug 2026')
 
+INSERT INTO students (groups_id) VALUES (23076)
+
 INSERT INTO subjects (title) VALUES ('geography'), ('english'),('biology')
 
 
@@ -38,7 +40,7 @@ SELECT g.id, g.title, b.title, m.value , l.title , s2.title
 from students s
 join books b on s.id = b.taken_by_student_id
 join marks m on s.id = m.student_id
-join `groups` g on s.id = g.id
+join `groups` g on g.id = s.id
 join lessons l on l.id = m.lesson_id
 join subjects s2 on s2.id = l.subject_id
 where s.id = 23076
