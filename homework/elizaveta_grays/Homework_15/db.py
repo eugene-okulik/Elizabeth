@@ -84,7 +84,11 @@ values = [
     (5, 'History lesson 1', student_id),
     (5, 'History lesson 2', student_id)
 ]
-cursor.executemany(query, values)
+for item in values:
+    value = item[0]
+    lesson_name = item[1]
+    lesson_id = lessons_to_insert[lesson_name]
+    cursor.execute(query, (value, lesson_id, student_id))
 db.commit()
 
 cursor.execute('SELECT value FROM marks where student_id = %s', (student_id,))
