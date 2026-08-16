@@ -77,12 +77,12 @@ db.commit()
 
 query = 'INSERT INTO marks (value,lesson_id, student_id) VALUES (%s, %s, %s)'
 values = [
-    (5, lessons_to_insert['Literature lesson 1'], student_id),
-    (3, lessons_to_insert['Literature lesson 2'], student_id),
-    (4, lessons_to_insert['Mathematic lesson 1'], student_id),
-    (3, lessons_to_insert['Mathematic lesson 2'], student_id),
-    (5, lessons_to_insert['History lesson 1'], student_id),
-    (5, lessons_to_insert['History lesson 2'], student_id)
+    (5, 'Literature lesson 1', student_id),
+    (3, 'Literature lesson 2', student_id),
+    (4, 'Mathematic lesson 1', student_id),
+    (3, 'Mathematic lesson 2', student_id),
+    (5, 'History lesson 1', student_id),
+    (5, 'History lesson 2', student_id)
 ]
 cursor.executemany(query, values)
 db.commit()
