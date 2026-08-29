@@ -29,20 +29,20 @@ with open(file_csv_path, newline='') as csvfile:
     file = csv.reader(csvfile)
     next(file)
     for row in file:
-        cursor.execute(''' 
+        cursor.execute('''
             select s.id
             from students s
             join `groups` g on s.group_id = g.id
             join books b on b.taken_by_student_id = s.id
             join marks m on m.student_id = s.id
-            join lessons l on l.id = m.lesson_id  
-            join subjects sub on sub.id = l.subject_id      
-            where s.name = %s 
-            and s.second_name = %s 
+            join lessons l on l.id = m.lesson_id
+            join subjects sub on sub.id = l.subject_id
+            where s.name = %s
+            and s.second_name = %s
             and g.title = %s
-            and b.title = %s 
-            and sub.title = %s 
-            and l.title = %s 
+            and b.title = %s
+            and sub.title = %s
+            and l.title = %s
             and m.value = %s
             ''', (row[0], row[1], row[2], row[3], row[4], row[5], row[6]))
         if cursor.fetchone() is None:
